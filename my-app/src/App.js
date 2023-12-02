@@ -1,4 +1,4 @@
-import { UserAuthContextProvider } from './component/context/UserAuthContext';
+
 import ReactDOM from 'react-dom/client';
 import { SignIn } from './component/Sign-In';
 import { Sign } from './component/Sign-Up';

@@ -1,5 +1,5 @@
 
-import { Link} from "react-router-dom"
+import { Link, Navigate, useNavigate} from "react-router-dom"
 import { useState } from "react";
 
 import Button from 'react-bootstrap/Button';
@@ -16,6 +16,7 @@ export const SignIn = () =>
         passWord:""
     })
    const[errorAuth , setErrorAuth] = useState("")
+   const navigate = useNavigate()
     const handleSubmit = async(event) => {
         event.preventDefault();
       try{
@@ -23,6 +24,7 @@ export const SignIn = () =>
               .then((res)=>{
                 console.log(res)
               })
+              navigate("/home")
       }
       catch(err){
           setErrorAuth(err.message)

@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import { useUserAuth } from './context/UserAuthContext'
+
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
