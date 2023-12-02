@@ -6,6 +6,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Container} from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
+import { Home } from './Home';
+import { ProtectedRoute } from './component/Route/ProtectedRoute';
 
 const App =() => {
   return (
@@ -31,7 +33,13 @@ const appRouter = createBrowserRouter([
   {
       path:"/sign-up",
       element:<Sign/>
+  },
+  {
+    path:"/home",
+    element:<ProtectedRoute><Home/></ProtectedRoute>
   }
+ 
+,
 
   
 
